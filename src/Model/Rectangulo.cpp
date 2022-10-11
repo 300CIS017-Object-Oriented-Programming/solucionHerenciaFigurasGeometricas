@@ -16,7 +16,7 @@ Rectangulo::Rectangulo(float base, float altura):Rectangulo() {
 }
 
 void Rectangulo::dibujarFigura() {
-    cout << "Rectángulo!!!";
+    cout << nombreFigura;
     cout <<"\n";
     for(int i = 0; i < 4; i++){
         for(int j = 0; j < 15; j++){
@@ -32,12 +32,10 @@ void Rectangulo::dibujarFigura() {
 
 float Rectangulo::calcularArea() {
     area = base * altura;
-    cout << "El area del rectangulo es: " << area << "\n";
     return area;
 }
 
 float Rectangulo::calcularPerimetro() {
     perimetro = (base * 2) + (altura * 2);
-    cout << "El perimetro del rectangulo es: " << perimetro << "\n";
     return perimetro;
 }

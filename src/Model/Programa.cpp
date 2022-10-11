@@ -35,7 +35,7 @@ void Programa::mostrarAreaFigura() {
     float area;
     for(auto & figura : vectorFiguras){
         area = figura->calcularArea();
-        cout << "El area del " <<  figura->getNombreFigura() << "es: " << area << "\n";
+        cout << "El area del " <<  figura->getNombreFigura() << " es: " << area << "\n";
     }
     cout << "\n";
 }

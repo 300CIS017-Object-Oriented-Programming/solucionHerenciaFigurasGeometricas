@@ -30,7 +30,7 @@ void FiguraGeometrica::dibujarFigura(int color){
             system("Color 07");
             break;
     }
-    dibujarFigura(); // Hace el llamado al metodo absstracto para que se llame la implementacion especifica de las subclases.
+    dibujarFigura(); // Hace el llamado al metodo abstracto para que se llame la implementacion especifica de las subclases.
 }
 
 float FiguraGeometrica::getArea()  {

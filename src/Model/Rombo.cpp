@@ -18,7 +18,7 @@ Rombo::Rombo(float lado, float diagonalMayor, float diagonalMenor): Rombo() {
 }
 
 void Rombo::dibujarFigura() {
-    cout << "Rombo!!!";
+    cout << nombreFigura;
     cout << "\n";
     int diagonal=3;
     int longitud = 2 * diagonal - 2;
@@ -48,12 +48,10 @@ void Rombo::dibujarFigura() {
 
 float Rombo::calcularArea(){
     area = (diagonalMenor * diagonalMayor) / 2;
-    cout << "El area del rombo es: " << area << "\n";
     return area;
 }
 
 float Rombo::calcularPerimetro(){
     perimetro = 4 * lado;
-    cout << "El area del rombo es: " << perimetro << "\n";
     return perimetro;
 }
