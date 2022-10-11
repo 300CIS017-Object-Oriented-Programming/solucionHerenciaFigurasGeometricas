@@ -17,7 +17,7 @@ using std::string;
 class FiguraGeometrica {
 protected:
     float area;
-    double perimetro;
+    float perimetro;
     string nombreFigura;
 public:
     FiguraGeometrica();
@@ -31,7 +31,7 @@ public:
 
     float getArea();
 
-    double getPerimetro();
+    float getPerimetro();
 
     const string &getNombreFigura() const;
 

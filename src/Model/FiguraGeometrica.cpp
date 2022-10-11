@@ -35,13 +35,13 @@ void FiguraGeometrica::dibujarFigura(int color){
 
 float FiguraGeometrica::getArea()  {
     if (area == 0) {
-        // Si no se ha definido se llama el metodo que lo calcula
+        // Si no se ha definido se llama el método que lo calcula. Esto va a llamar al método específico de cada clase.
         calcularArea();
     }
     return area;
 }
 
-double FiguraGeometrica::getPerimetro() {
+float FiguraGeometrica::getPerimetro() {
     if (perimetro == 0) {
         // Si no se ha definido se llama el metodo que lo calcula
         calcularPerimetro();

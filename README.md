@@ -1,5 +1,5 @@
 # Solución ejercicio de Figuras Geométricas que utiliza herencia, polimorfismo y clases abstractas
-## Solución creada por Carlos Camacho en el 2022-1 y modificada por Luisa Rincón
+>Solución creada por Carlos Camacho y Sebastian Camaño en el 2022-1 y modificada por Luisa Rincón
 
 # Introducción
 
