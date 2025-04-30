@@ -23,8 +23,8 @@ classDiagram
     FiguraGeometrica <|-- Rectangulo
     FiguraGeometrica <|-- Rombo
     Programa o-- FiguraGeometrica
-    View --> Programa
-    Main --> View
+    Programa --> View
+    Main --> Programa
 
     class FiguraGeometrica {
         # float area
