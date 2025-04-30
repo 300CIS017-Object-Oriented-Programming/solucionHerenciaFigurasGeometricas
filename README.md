@@ -16,7 +16,7 @@ Esta solución responde al enunciado propuesto en: https://github.com/300CIS017-
 5. El sistema suma y muestra el total de las áreas de cada figura agregada.
 
 ## Link UML
-``` Mermaid
+```mermaid
 classDiagram
     FiguraGeometrica <|-- Cuadrado
     FiguraGeometrica <|-- Circulo
