@@ -16,5 +16,70 @@ Esta solución responde al enunciado propuesto en: https://github.com/300CIS017-
 5. El sistema suma y muestra el total de las áreas de cada figura agregada.
 
 ## Link UML
+``` Mermaid
+classDiagram
+    FiguraGeometrica <|-- Cuadrado
+    FiguraGeometrica <|-- Circulo
+    FiguraGeometrica <|-- Rectangulo
+    FiguraGeometrica <|-- Rombo
+ 
 
+    class FiguraGeometrica {
+        # float area
+        # float perimetro
+        # string nombreFigura
+        + FiguraGeometrica()
+        + ~FiguraGeometrica()
+        + dibujarFigura(int color) void
+        + dibujarFigura()* void
+        + calcularArea()* float
+        + calcularPerimetro()* float
+        + getArea() float
+        + getPerimetro() float
+        + getNombreFigura() string
+    }
+    
+    class Cuadrado {
+        - float lado
+        + Cuadrado()
+        + Cuadrado(float longitudLado)
+        + ~Cuadrado()
+        + dibujarFigura() void
+        + calcularArea() float
+        + calcularPerimetro() float
+    }
+    
+    class Rombo {
+        - float lado
+        - float diagonalMayor
+        - float diagonalMenor
+        + Rombo()
+        + Rombo(float lado, float diagonalMayor, float diagonalMenor)
+        + ~Rombo()
+        + dibujarFigura() void
+        + calcularArea() float
+        + calcularPerimetro() float
+    }
+    
+    class Circulo {
+        - float radio
+        + Circulo()
+        + Circulo(float radio)
+        + ~Circulo()
+        + dibujarFigura() void
+        + calcularArea() float
+        + calcularPerimetro() float
+    }
+    
+    class Rectangulo {
+        - float base
+        - float altura
+        + Rectangulo()
+        + Rectangulo(float base, float altura)
+        + ~Rectangulo()
+        + dibujarFigura() void
+        + calcularArea() float
+        + calcularPerimetro() float
+    }
+```
 https://drive.google.com/file/d/1FRbCijspFYxBS0EdT0Flei9XwwCLBICp/view?usp=sharing

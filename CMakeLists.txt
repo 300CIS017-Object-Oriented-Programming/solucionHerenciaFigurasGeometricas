@@ -1,13 +1,29 @@
-cmake_minimum_required(VERSION 3.19)
+cmake_minimum_required(VERSION 3.27)
 project(Ejercicio_Polimorfismo)
 
-include_directories(lib)
-include_directories(src)
-include_directories(testing)
+# Definir las rutas base para los directorios de código fuente
+set(SRC_DIR src)
+set(MODEL_DIR ${SRC_DIR}/Model)
+set(VIEW_DIR ${SRC_DIR}/View)
 
-add_subdirectory(lib/googleTest)
-add_subdirectory(src)
-add_subdirectory(testing)
+# Incluir directorios de encabezados
+include_directories(${MODEL_DIR})
+include_directories(${VIEW_DIR})
 
-#Esta linea debe ir de ultima para que quede claro cual es la version del c++ y  no se reemplace en pasos anteriores
-set(CMAKE_CXX_STANDARD 14)
+# Buscar todos los archivos fuente y de encabezado automáticamente
+file(GLOB_RECURSE MODEL_SOURCES ${MODEL_DIR}/*.cpp ${MODEL_DIR}/*.h)
+file(GLOB_RECURSE VIEW_SOURCES ${VIEW_DIR}/*.cpp ${VIEW_DIR}/*.h)
+
+set(MAIN_FILES
+        ${SRC_DIR}/Main.cpp
+)
+
+# Combinar todas las fuentes
+set(SOURCES ${MODEL_SOURCES} ${VIEW_SOURCES})
+
+# Nombre del binario basado en el nombre del proyecto
+set(BINARY ${CMAKE_PROJECT_NAME})
+
+# Crear el ejecutable principal
+add_executable(${BINARY}_exe ${MAIN_FILES} ${SOURCES})
+
