@@ -102,4 +102,3 @@ classDiagram
         + mostrarMensaje(string mensaje) void
     }
 ```
-https://drive.google.com/file/d/1FRbCijspFYxBS0EdT0Flei9XwwCLBICp/view?usp=sharing
