@@ -85,8 +85,7 @@ classDiagram
     }
     
       class Programa {
-        - vector<FiguraGeometrica*> figuras
-        - View* vista
+        - vector<FiguraGeometrica*> vectorFiguras
         + Programa()
         + ~Programa()
         + iniciar() void
