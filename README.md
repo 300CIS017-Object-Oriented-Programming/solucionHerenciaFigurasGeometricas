@@ -22,7 +22,9 @@ classDiagram
     FiguraGeometrica <|-- Circulo
     FiguraGeometrica <|-- Rectangulo
     FiguraGeometrica <|-- Rombo
- 
+    Programa o-- FiguraGeometrica
+    Programa o-- View
+    Main --> Programa
 
     class FiguraGeometrica {
         # float area
@@ -80,6 +82,25 @@ classDiagram
         + dibujarFigura() void
         + calcularArea() float
         + calcularPerimetro() float
+    }
+    
+      class Programa {
+        - vector<FiguraGeometrica*> figuras
+        - View* vista
+        + Programa()
+        + ~Programa()
+        + iniciar() void
+        + agregarFigura() void
+        + mostrarFiguras() void
+        + calcularAreaTotal() float
+    }
+    
+    class View {
+        + View()
+        + ~View()
+        + mostrarMenu() int
+        + mostrarFigura(FiguraGeometrica* figura) void
+        + mostrarMensaje(string mensaje) void
     }
 ```
 https://drive.google.com/file/d/1FRbCijspFYxBS0EdT0Flei9XwwCLBICp/view?usp=sharing
